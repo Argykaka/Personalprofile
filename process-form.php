@@ -1,4 +1,6 @@
 <?php
+header('Content-Type: application/json');
+
 // Database connection details
 $servername = "localhost";
 $username = "root"; // Replace with your database username
@@ -10,7 +12,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    echo json_encode(['success' => false, 'message' => 'Database connection failed: ' . $conn->connect_error]);
+    exit;
 }
 
 // Get form data
@@ -23,9 +26,9 @@ $message = $_POST['message'];
 $sql = "INSERT INTO Messages (name, email, subject, message) VALUES ('$name', '$email', '$subject', '$message')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Message sent successfully!";
+    echo json_encode(['success' => true, 'message' => 'Message sent successfully!']);
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo json_encode(['success' => false, 'message' => 'Error: ' . $conn->error]);
 }
 
 // Close connection

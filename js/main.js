@@ -82,6 +82,36 @@ navItems.forEach((navItem) => {
     });
 });
 
+//notification
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch('process-form.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const popupMessage = document.getElementById('popup-message');
+
+        // Set the message and show the popup
+        popupMessage.textContent = data.success ? "Message sent successfully!" : "Error sending message!";
+        popupMessage.style.display = 'block';
+
+        // Hide the popup after 3 seconds
+        setTimeout(() => {
+            popupMessage.style.display = 'none';
+        }, 3000);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
+
 //Scroll reveal animations
 //Common reveal options to create reveal animations
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2024 at 08:38 AM
+-- Generation Time: Dec 11, 2024 at 01:06 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,7 +41,16 @@ CREATE TABLE `messages` (
 --
 
 INSERT INTO `messages` (`id`, `name`, `email`, `subject`, `message`, `submitted_at`) VALUES
-(1, 'Ry', 'NinongRy@gmail.com', 'Web Creation', 'Can I hire you to create a website for our expanding media influence for cooking, we want you to create website relates to cook. The perfect bite pareehh', '2024-12-09 07:36:19');
+(1, 'Ry', 'NinongRy@gmail.com', 'Web Creation', 'Can I hire you to create a website for our expanding media influence for cooking, we want you to create website relates to cook. The perfect bite pareehh', '2024-12-09 07:36:19'),
+(2, 'Roger', 'UncleRoger@bogart.com', 'Web creation', 'Fuyiooohh', '2024-12-09 08:20:14'),
+(3, 'Gordon', 'Gordonramsey@gmail.com', 'Web design', 'I want to hire you as my designer for my soon webpage', '2024-12-10 00:50:29'),
+(4, 'test', 'test@nmsc.edu.ph', 'test', 'taegaegaegae TESTINGGG', '2024-12-10 23:33:21'),
+(5, 'test', 'test@nmsc.edu.ph', 'test', 'taegaegaegae TESTINGGG', '2024-12-10 23:33:29'),
+(6, 'testing', 'TESTING@GMAIL.COM', 'TRIAL', 'TRY FOR 3RD TIME', '2024-12-10 23:36:41'),
+(7, '4thTest', 'TEST4TH@GMAIL.COM', '4TH', '4TH TIME IS A CHARM', '2024-12-10 23:40:15'),
+(8, '5thTest', 'TEST5TH@GMAIL.COM', '5TH', '5TH TIME IS A CHARM', '2024-12-10 23:40:35'),
+(9, 'JJBAREA', 'LEBRON@NMSCS.EDU.PH', 'TEST', 'kakaeng', '2024-12-10 23:43:34'),
+(10, 'Finaltest', 'FinalTESTING@GMAIL.COM', 'FINAL', 'LAST TESTING', '2024-12-11 00:05:04');
 
 --
 -- Indexes for dumped tables
@@ -61,7 +70,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
